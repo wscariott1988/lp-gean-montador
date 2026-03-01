@@ -11,17 +11,31 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
 
-    <!-- OTIMIZAÇÃO: Força o navegador a baixar a foto super leve de 36kb primeiro -->
+    <!-- 1. OTIMIZAÇÃO MÁXIMA DE LCP E DNS -->
     <link rel="preload" href="foto.jpeg" as="image" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- 2. FONTES DO GOOGLE ASSÍNCRONAS (Mata o atraso de 1.5s) -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap"
+        as="style">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap" />
+    </noscript>
 
-    <!-- Tailwind -->
+    <!-- Swiper CSS Assíncrono -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+        onload="this.media='all'" />
+
+    <!-- Script do Tailwind CDN (Infelizmente não pode ser deferido sem quebrar a tela, mas otimizamos o resto) -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
 
     <script>
         tailwind.config = {
@@ -30,7 +44,7 @@
                 extend: {
                     colors: {
                         "primary": "#f2800d",
-                        "primary-dark": "#d66e00",
+                        "primary-dark": "#c26000",
                         "navy": "#0f172a",
                         "navy-light": "#1e293b",
                         "background-light": "#f8f7f5",
@@ -106,30 +120,30 @@
             animation: pulse-strong 1.5s infinite ease-in-out;
         }
 
-        /* Swiper Customizations for High Conversion */
         :root {
             --swiper-theme-color: #f2800d;
         }
 
         .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             background-color: #cbd5e1;
             opacity: 1;
+            margin: 0 8px !important;
         }
 
         .swiper-pagination-bullet-active {
             background-color: #f2800d !important;
-            width: 24px;
-            border-radius: 5px;
+            width: 28px;
+            border-radius: 6px;
             transition: all 0.3s ease;
         }
 
         .swiper-button-next,
         .swiper-button-prev {
             background-color: rgba(255, 255, 255, 0.95);
-            width: 44px;
-            height: 44px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             color: #f2800d !important;
@@ -153,7 +167,6 @@
             transition: transform 0.2s;
         }
 
-        /* Fix container padding for arrows */
         .swiper-container-padding {
             padding-left: 10px;
             padding-right: 10px;
@@ -174,10 +187,12 @@
     <header
         class="sticky top-0 z-40 bg-white/95 dark:bg-navy-light/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 shadow-sm">
         <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between w-full">
-            <img src="logo.png" alt="Gean Carlos Montador Logo" class="h-16 md:h-24 w-auto object-contain">
+            <!-- 3. CORREÇÃO DA LOGO: Tags explícitas de tamanho adicionadas para remover erro no PageSpeed -->
+            <img src="logo.png" alt="Gean Carlos Montador Logo" width="160" height="64"
+                class="h-16 md:h-24 w-auto object-contain">
 
             <div class="hidden sm:flex flex-col items-end">
-                <div class="flex items-center gap-1 text-xs font-bold text-primary">
+                <div class="flex items-center gap-1 text-xs font-bold text-primary-dark">
                     <span class="material-symbols-outlined text-sm">schedule</span>
                     <span>Seg-Sáb, 08h-18h</span>
                 </div>
@@ -186,7 +201,7 @@
             </div>
             <div class="sm:hidden">
                 <a href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!"
-                    class="text-primary p-2">
+                    class="text-primary p-2" aria-label="Conversar no WhatsApp">
                     <span class="material-symbols-outlined">chat</span>
                 </a>
             </div>
@@ -203,9 +218,8 @@
                     </div>
                     <div
                         class="relative w-full aspect-[4/5] bg-cover bg-top rounded-xl shadow-lg border-4 border-white dark:border-slate-700 overflow-hidden">
-                        <!-- IMAGEM ALTERADA PARA JPEG COM DIMENSÕES FIXAS -->
                         <img src="foto.jpeg" alt="Gean Carlos - Montador Profissional" width="400" height="500"
-                            fetchpriority="high" class="w-full h-full object-cover">
+                            fetchpriority="high" decoding="async" class="w-full h-full object-cover">
                         <div
                             class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
                             <span
@@ -218,12 +232,12 @@
                 </div>
                 <div class="w-full md:w-1/2 flex flex-col gap-6 text-center md:text-left">
                     <div>
-                        <span class="text-primary font-bold tracking-wide uppercase text-xs mb-2 block">10 Anos de
+                        <span class="text-primary-dark font-bold tracking-wide uppercase text-xs mb-2 block">10 Anos de
                             Experiência</span>
-                        <h2
+                        <h1
                             class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy dark:text-white leading-tight tracking-tight">
-                            Montador de Móveis <span class="text-primary">Profissional</span>
-                        </h2>
+                            Montador de Móveis <span class="text-primary-dark">Profissional</span>
+                        </h1>
                     </div>
                     <p class="text-slate-600 dark:text-slate-300 text-base md:text-lg leading-relaxed">
                         Especialista em móveis de loja e internet. Atendemos Blumenau, Indaial, Gaspar, Pomerode e Timbó
@@ -240,8 +254,7 @@
                     </div>
                     <a class="mt-2 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white text-base font-bold py-4 px-8 rounded-lg shadow-lg shadow-primary/30 transition-all transform active:scale-95 pulse-light"
                         href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!">
-                        <span class="material-symbols-outlined">chat</span>
-                        Solicitar Orçamento no WhatsApp
+                        <span class="material-symbols-outlined">chat</span> Solicitar Orçamento no WhatsApp
                     </a>
                 </div>
             </div>
@@ -258,11 +271,10 @@
                         <span class="material-symbols-outlined text-3xl text-primary">payments</span>
                     </div>
                     <div>
-                        <h3 class="text-lg md:text-xl font-bold mb-1">Pagamento 100% Seguro</h3>
+                        <h2 class="text-lg md:text-xl font-bold mb-1">Pagamento 100% Seguro</h2>
                         <p class="text-slate-300 text-sm md:text-base leading-relaxed">
                             Aceitamos <strong class="text-white">PIX</strong> ou <strong
-                                class="text-white">Dinheiro</strong>.
-                            Pagamento realizado somente <span
+                                class="text-white">Dinheiro</strong>. Pagamento realizado somente <span
                                 class="text-primary font-bold underline decoration-primary/50 underline-offset-2">ao
                                 final do serviço</span> aprovado.
                         </p>
@@ -303,7 +315,6 @@
                     <p class="text-sm text-slate-500 dark:text-slate-400">Montagem completa de guarda-roupas, camas e
                         mais.</p>
                 </div>
-
                 <div
                     class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
                     <div
@@ -313,7 +324,6 @@
                     <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Escritório</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400">Mesas, estantes e cadeiras ergonômicas.</p>
                 </div>
-
                 <div
                     class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
                     <div
@@ -323,7 +333,6 @@
                     <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Desmontagem</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400">Cuidado total na desmontagem e remontagem.</p>
                 </div>
-
                 <div
                     class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
                     <div
@@ -335,7 +344,6 @@
                     <p class="text-sm text-slate-500 dark:text-slate-400">Instalação segura de TVs e suportes de parede.
                     </p>
                 </div>
-
                 <div
                     class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
                     <div
@@ -346,7 +354,6 @@
                     <p class="text-sm text-slate-500 dark:text-slate-400">Adaptação precisa para sua cozinha planejada.
                     </p>
                 </div>
-
                 <div
                     class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
                     <div
@@ -356,7 +363,6 @@
                     <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Acessórios</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400">Cortinas, quadros e itens de decoração.</p>
                 </div>
-
                 <div
                     class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
                     <div
@@ -367,7 +373,6 @@
                     <p class="text-sm text-slate-500 dark:text-slate-400">Montagem de equipamentos de ginástica.</p>
                 </div>
 
-                <!-- CTA Card -->
                 <a href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!"
                     class="group bg-primary p-6 rounded-2xl shadow-lg hover:shadow-primary/40 transition-all flex flex-col justify-center items-center text-center text-white pulse-light">
                     <span class="material-symbols-outlined text-4xl mb-4">add_circle</span>
@@ -395,7 +400,6 @@
                     acabamento perfeito das nossas montagens.</p>
             </div>
 
-            <!-- Swiper Container -->
             <div class="max-w-6xl mx-auto swiper-container-padding relative">
                 <div class="swiper mySwiper w-full pb-14">
                     <div class="swiper-wrapper">
@@ -497,29 +501,24 @@
                         </div>
 
                     </div>
-
-                    <!-- Paginadores -->
                     <div class="swiper-pagination"></div>
                 </div>
-
-                <!-- Setas de Navegação -->
                 <div class="swiper-button-prev hidden md:flex" aria-label="Anterior"></div>
                 <div class="swiper-button-next hidden md:flex" aria-label="Próximo"></div>
             </div>
 
             <div class="text-center mt-2">
                 <a href="https://wa.me/5547988943606?text=Olá,%20gostei%20dos%20trabalhos%20e%20gostaria%20de%20um%20orçamento!"
-                    class="text-primary font-bold hover:underline text-sm inline-flex items-center gap-1">
+                    class="text-primary-dark font-bold hover:underline text-sm inline-flex items-center gap-1">
                     Gostou? Peça um orçamento sem compromisso <span
                         class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
             </div>
         </section>
 
-        <!-- Why Hire & Testimonials Section -->
+        <!-- Why Hire Section -->
         <section class="px-4 pt-4 pb-16 bg-white dark:bg-navy">
             <div class="flex flex-col lg:flex-row gap-12 items-start">
-                <!-- Left: Why Hire -->
                 <div class="w-full lg:w-1/2">
                     <h2 class="text-navy dark:text-white text-3xl font-bold mb-8">Por que contratar o Gean Carlos?</h2>
                     <div class="space-y-8">
@@ -559,11 +558,9 @@
                     </div>
                 </div>
 
-                <!-- Right: Testimonials -->
                 <div
                     class="w-full lg:w-1/2 bg-slate-50 dark:bg-navy-light p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
                     <div class="space-y-6">
-                        <!-- Individual Testimonial -->
                         <div class="pb-6 border-b border-slate-200 dark:border-slate-700 last:border-0 last:pb-0">
                             <div class="flex text-yellow-400 mb-2">
                                 <span class="material-symbols-outlined fill-current">star</span>
@@ -591,18 +588,18 @@
                         </div>
                     </div>
                     <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
-                        <p class="text-sm font-medium text-primary text-center italic">Excelência comprovada por
+                        <p class="text-sm font-medium text-primary-dark text-center italic">Excelência comprovada por
                             centenas de clientes em toda Blumenau e região.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEO Content Section -->
+        <!-- SEO Content -->
         <section class="px-4 py-12 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
             <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-navy dark:text-white font-bold mb-4">Serviços Profissionais de Montagem em Santa
-                    Catarina</h3>
+                <h2 class="text-navy dark:text-white font-bold mb-4 text-xl">Serviços Profissionais de Montagem em Santa
+                    Catarina</h2>
                 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                     Gean Carlos é o seu <strong>montador de móveis em Blumenau</strong> de confiança, atendendo também
                     as cidades de <strong>Indaial, Gaspar, Timbó e Pomerode</strong>. Especializado na montagem de
@@ -626,7 +623,7 @@
         </footer>
     </main>
 
-    <!-- WhatsApp Floating Button -->
+    <!-- WhatsApp Button -->
     <a class="fixed bottom-6 right-6 z-50 group"
         href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!"
         aria-label="Falar no WhatsApp">
@@ -641,7 +638,7 @@
         </div>
     </a>
 
-    <!-- SCRIPT DO SWIPER DEFERIDO -->
+    <!-- SCRIPT DO SWIPER -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script>
         window.addEventListener('DOMContentLoaded', function () {
