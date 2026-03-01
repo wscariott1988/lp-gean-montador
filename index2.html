@@ -64,17 +64,9 @@
         }
 
         @keyframes pulse-light {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.03);
-            }
-
-            100% {
-                transform: scale(1);
-            }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
         }
 
         @keyframes pulse-strong {
@@ -82,12 +74,10 @@
                 transform: scale(1);
                 box-shadow: 0 4px 20px -2px rgba(37, 211, 102, 0.5);
             }
-
             50% {
                 transform: scale(1.1);
                 box-shadow: 0 8px 30px 4px rgba(37, 211, 102, 0.8);
             }
-
             100% {
                 transform: scale(1);
                 box-shadow: 0 4px 20px -2px rgba(37, 211, 102, 0.5);
@@ -106,55 +96,43 @@
         :root {
             --swiper-theme-color: #f2800d;
         }
-
         .swiper-pagination-bullet {
             width: 10px;
             height: 10px;
             background-color: #cbd5e1;
             opacity: 1;
         }
-
         .swiper-pagination-bullet-active {
             background-color: #f2800d !important;
             width: 24px;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
-
-        .swiper-button-next,
-        .swiper-button-prev {
+        .swiper-button-next, .swiper-button-prev {
             background-color: rgba(255, 255, 255, 0.95);
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             color: #f2800d !important;
         }
-
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
+        .swiper-button-next::after, .swiper-button-prev::after {
             font-size: 20px !important;
             font-weight: bold;
         }
-
-        .dark .swiper-button-next,
-        .dark .swiper-button-prev {
+        .dark .swiper-button-next, .dark .swiper-button-prev {
             background-color: rgba(30, 41, 59, 0.95);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
-
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
+        .swiper-button-next:hover, .swiper-button-prev:hover {
             transform: scale(1.1);
             transition: transform 0.2s;
         }
-
         /* Fix container padding for arrows */
         .swiper-container-padding {
             padding-left: 10px;
             padding-right: 10px;
         }
-
         @media (min-width: 768px) {
             .swiper-container-padding {
                 padding-left: 40px;
@@ -383,29 +361,24 @@
         <!-- CARROSSEL: Trabalhos Realizados Section -->
         <section class="pt-16 pb-4 bg-white dark:bg-navy-light/20 relative overflow-hidden">
             <div class="max-w-5xl mx-auto px-4 mb-10 text-center relative z-10">
-                <h2 class="text-navy dark:text-white text-3xl md:text-4xl font-bold mb-4">Nossos Trabalhos Realizados
-                </h2>
+                <h2 class="text-navy dark:text-white text-3xl md:text-4xl font-bold mb-4">Nossos Trabalhos Realizados</h2>
                 <div class="h-1.5 w-20 bg-primary mx-auto rounded-full"></div>
-                <p class="text-slate-500 dark:text-slate-400 mt-4 text-sm max-w-lg mx-auto">Confira a qualidade e o
-                    acabamento perfeito das nossas montagens.</p>
+                <p class="text-slate-500 dark:text-slate-400 mt-4 text-sm max-w-lg mx-auto">Confira a qualidade e o acabamento perfeito das nossas montagens.</p>
             </div>
 
             <!-- Swiper Container -->
             <div class="max-w-6xl mx-auto swiper-container-padding relative">
                 <div class="swiper mySwiper w-full pb-14">
                     <div class="swiper-wrapper">
-
+                        
                         <!-- Slide 1 -->
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
                                 <!-- aspect-[4/5] deixa a imagem mais alongada na vertical -->
                                 <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho1.jpeg" onerror="this.src='trabalho1.jpg'" alt="Cozinha Completa"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <img src="trabalho1.jpeg" onerror="this.src='trabalho1.jpg'" alt="Cozinha Completa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Cozinha Completa</p>
                                 </div>
                             </div>
@@ -413,15 +386,11 @@
 
                         <!-- Slide 2 -->
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
                                 <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho2.jpeg" onerror="this.src='trabalho2.jpg'"
-                                        alt="Montagem de Cozinha Planejada"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <img src="trabalho2.jpeg" onerror="this.src='trabalho2.jpg'" alt="Montagem de Cozinha Planejada" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Cozinha Completa</p>
                                 </div>
                             </div>
@@ -429,15 +398,11 @@
 
                         <!-- Slide 3 -->
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
                                 <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho3.jpeg" onerror="this.src='trabalho3.jpg'"
-                                        alt="Instalação de Painel de TV"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <img src="trabalho3.jpeg" onerror="this.src='trabalho3.jpg'" alt="Instalação de Painel de TV" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Painel de TV</p>
                                 </div>
                             </div>
@@ -445,15 +410,11 @@
 
                         <!-- Slide 4 -->
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
                                 <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho4.jpeg" onerror="this.src='trabalho4.jpg'"
-                                        alt="Montagem de Gabinete de Pia"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <img src="trabalho4.jpeg" onerror="this.src='trabalho4.jpg'" alt="Montagem de Gabinete de Pia" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Gabinete de Pia</p>
                                 </div>
                             </div>
@@ -461,15 +422,11 @@
 
                         <!-- Slide 5 -->
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
                                 <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho5.jpeg" onerror="this.src='trabalho5.jpg'"
-                                        alt="Montagem de Balcão Buffet"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <img src="trabalho5.jpeg" onerror="this.src='trabalho5.jpg'" alt="Montagem de Balcão Buffet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Balcão Buffet</p>
                                 </div>
                             </div>
@@ -477,22 +434,18 @@
 
                         <!-- Slide 6 -->
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
                                 <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho6.jpeg" onerror="this.src='trabalho6.jpg'"
-                                        alt="Mesa de Escritório"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <img src="trabalho6.jpeg" onerror="this.src='trabalho6.jpg'" alt="Mesa de Escritório" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Mesa de Escritório</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-
+                    
                     <!-- Paginadores -->
                     <div class="swiper-pagination"></div>
                 </div>
@@ -501,12 +454,10 @@
                 <div class="swiper-button-prev hidden md:flex"></div>
                 <div class="swiper-button-next hidden md:flex"></div>
             </div>
-
+            
             <div class="text-center mt-2">
-                <a href="https://wa.me/5547988943606?text=Olá,%20gostei%20dos%20trabalhos%20e%20gostaria%20de%20um%20orçamento!"
-                    class="text-primary font-bold hover:underline text-sm inline-flex items-center gap-1">
-                    Gostou? Peça um orçamento sem compromisso <span
-                        class="material-symbols-outlined text-sm">arrow_forward</span>
+                 <a href="https://wa.me/5547988943606?text=Olá,%20gostei%20dos%20trabalhos%20e%20gostaria%20de%20um%20orçamento!" class="text-primary font-bold hover:underline text-sm inline-flex items-center gap-1">
+                    Gostou? Peça um orçamento sem compromisso <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
             </div>
         </section>
@@ -646,12 +597,12 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
+                slidesPerView: 1, 
                 spaceBetween: 20,
-                loop: true,
-                autoplay: {
+                loop: true, 
+                autoplay: { 
                     delay: 2500, // Alterado para 2,5 segundos
-                    disableOnInteraction: false,
+                    disableOnInteraction: false, 
                 },
                 pagination: { el: ".swiper-pagination", clickable: true, dynamicBullets: true, },
                 navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev", },
