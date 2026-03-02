@@ -1,179 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Gean Carlos Montador | Montagem Profissional em Blumenau</title>
-    <meta name="description"
-        content="Montador de móveis profissional com 10 anos de experiência em Blumenau e região. Montagem garantida de móveis de loja, internet e planejados. Peça seu orçamento!" />
+    <meta name="description" content="Montador de móveis profissional com 10 anos de experiência em Blumenau e região. Montagem garantida de móveis de loja, internet e planejados. Peça seu orçamento!" />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
 
-    <!-- 1. PRELOAD DA IMAGEM HERO -->
+    <!-- PRELOAD LCP -->
     <link rel="preload" href="foto.jpeg" as="image" fetchpriority="high">
 
-    <!-- 2. DNS PRECONNECTS -->
+    <!-- CSS COMPILADO (Alta Performance) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- DNS PRECONNECTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- 3. A MÁGICA DA PERFORMANCE: SEU CSS PURO! (Adeus CDN pesado) -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- 4. FONTES E SWIPER ASSÍNCRONOS (Não travam a tela) -->
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap"
-        as="style">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap"
-        media="print" onload="this.media='all'" />
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap" />
-    </noscript>
+    <!-- FONTES E SWIPER ASSÍNCRONOS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap" /></noscript>
 
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
-        onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
 
-    <!-- Animações e Swiper Custom -->
+    <!-- ANIMAÇÕES CUSTOMIZADAS -->
     <style>
-        body {
-            font-family: 'Manrope', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        @keyframes pulse-light {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.03);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes pulse-strong {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 4px 20px -2px rgba(37, 211, 102, 0.5);
-            }
-
-            50% {
-                transform: scale(1.1);
-                box-shadow: 0 8px 30px 4px rgba(37, 211, 102, 0.8);
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 4px 20px -2px rgba(37, 211, 102, 0.5);
-            }
-        }
-
-        .pulse-light {
-            animation: pulse-light 2s infinite ease-in-out;
-        }
-
-        .pulse-strong {
-            animation: pulse-strong 1.5s infinite ease-in-out;
-        }
-
-        :root {
-            --swiper-theme-color: #f2800d;
-        }
-
-        .swiper-pagination-bullet {
-            width: 12px;
-            height: 12px;
-            background-color: #cbd5e1;
-            opacity: 1;
-            margin: 0 8px !important;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: #f2800d !important;
-            width: 28px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            background-color: rgba(255, 255, 255, 0.95);
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            color: #f2800d !important;
-        }
-
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            font-size: 20px !important;
-            font-weight: bold;
-        }
-
-        .dark .swiper-button-next,
-        .dark .swiper-button-prev {
-            background-color: rgba(30, 41, 59, 0.95);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-        }
-
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-            transform: scale(1.1);
-            transition: transform 0.2s;
-        }
-
-        .swiper-container-padding {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        @media (min-width: 768px) {
-            .swiper-container-padding {
-                padding-left: 40px;
-                padding-right: 40px;
-            }
-        }
+        body { font-family: 'Manrope', sans-serif; scroll-behavior: smooth; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        @keyframes pulse-light { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+        @keyframes pulse-strong { 0% { transform: scale(1); box-shadow: 0 4px 20px -2px rgba(37, 211, 102, 0.5); } 50% { transform: scale(1.1); box-shadow: 0 8px 30px 4px rgba(37, 211, 102, 0.8); } 100% { transform: scale(1); box-shadow: 0 4px 20px -2px rgba(37, 211, 102, 0.5); } }
+        .pulse-light { animation: pulse-light 2s infinite ease-in-out; }
+        .pulse-strong { animation: pulse-strong 1.5s infinite ease-in-out; }
+        :root { --swiper-theme-color: #f2800d; }
+        .swiper-pagination-bullet { width: 12px; height: 12px; background-color: #cbd5e1; opacity: 1; margin: 0 8px !important; }
+        .swiper-pagination-bullet-active { background-color: #f2800d !important; width: 28px; border-radius: 6px; transition: all 0.3s ease; }
+        .swiper-button-next, .swiper-button-prev { background-color: rgba(255, 255, 255, 0.95); width: 48px; height: 48px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); color: #f2800d !important; }
+        .swiper-button-next::after, .swiper-button-prev::after { font-size: 20px !important; font-weight: bold; }
+        .dark .swiper-button-next, .dark .swiper-button-prev { background-color: rgba(30, 41, 59, 0.95); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); }
+        .swiper-button-next:hover, .swiper-button-prev:hover { transform: scale(1.1); transition: transform 0.2s; }
+        .swiper-container-padding { padding-left: 10px; padding-right: 10px; }
+        @media (min-width: 768px) { .swiper-container-padding { padding-left: 40px; padding-right: 40px; } }
     </style>
 </head>
 
-<body
-    class="bg-background-light dark:bg-background-dark text-text-main dark:text-slate-100 min-h-screen flex flex-col font-display selection:bg-primary selection:text-white relative">
-
-    <header
-        class="sticky top-0 z-40 bg-white/95 dark:bg-navy-light/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 shadow-sm">
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-slate-100 min-h-screen flex flex-col font-display selection:bg-primary selection:text-white relative">
+    <header class="sticky top-0 z-40 bg-white/95 dark:bg-navy-light/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 shadow-sm">
         <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between w-full">
-            <!-- 5. OTIMIZAÇÃO: Logo com largura e altura para evitar Reflow no PageSpeed -->
-            <img src="logo.png" alt="Gean Carlos Montador Logo" width="160" height="64"
-                class="h-16 md:h-24 w-auto object-contain">
-
+            <img src="logo.png" alt="Gean Carlos Montador Logo" width="160" height="64" class="h-16 md:h-24 w-auto object-contain">
             <div class="hidden sm:flex flex-col items-end">
                 <div class="flex items-center gap-1 text-xs font-bold text-primary-dark">
                     <span class="material-symbols-outlined text-sm">schedule</span>
                     <span>Seg-Sáb, 08h-18h</span>
                 </div>
-                <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5 max-w-[150px] text-right truncate">
-                    Blumenau • Indaial • Gaspar</p>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5 max-w-[150px] text-right truncate">Blumenau • Indaial • Gaspar</p>
             </div>
             <div class="sm:hidden">
-                <a href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!"
-                    class="text-primary p-2" aria-label="Falar no WhatsApp">
+                <a href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!" class="text-primary p-2" aria-label="Conversar no WhatsApp">
                     <span class="material-symbols-outlined">chat</span>
                 </a>
             </div>
@@ -182,60 +68,43 @@
 
     <main class="flex-grow w-full max-w-5xl mx-auto">
         <div class="@container">
-            <!-- Hero Section -->
             <div class="flex flex-col md:flex-row gap-8 px-4 py-8 md:py-16 items-center">
                 <div class="w-full md:w-1/2 relative group">
-                    <div
-                        class="absolute inset-0 bg-primary/20 rounded-xl transform rotate-2 transition-transform group-hover:rotate-1">
-                    </div>
-                    <div
-                        class="relative w-full aspect-[4/5] bg-cover bg-top rounded-xl shadow-lg border-4 border-white dark:border-slate-700 overflow-hidden">
-                        <img src="foto.jpeg" alt="Gean Carlos - Montador Profissional" width="400" height="500"
-                            fetchpriority="high" decoding="async" class="w-full h-full object-cover">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
-                            <span
-                                class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold border border-white/30 shadow-sm">
-                                <span class="material-symbols-outlined text-sm text-primary">verified</span>
-                                Profissional Verificado
+                    <div class="absolute inset-0 bg-primary/20 rounded-xl transform rotate-2 transition-transform group-hover:rotate-1"></div>
+                    <div class="relative w-full aspect-[4/5] bg-cover bg-top rounded-xl shadow-lg border-4 border-white dark:border-slate-700 overflow-hidden">
+                        <img src="foto.jpeg" alt="Gean Carlos - Montador Profissional" width="400" height="500" fetchpriority="high" decoding="async" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+                            <span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold border border-white/30 shadow-sm">
+                                <span class="material-symbols-outlined text-sm text-primary">verified</span> Profissional Verificado
                             </span>
                         </div>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 flex flex-col gap-6 text-center md:text-left">
                     <div>
-                        <span class="text-primary-dark font-bold tracking-wide uppercase text-xs mb-2 block">10 Anos de
-                            Experiência</span>
-                        <h1
-                            class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy dark:text-white leading-tight tracking-tight">
+                        <span class="text-primary-dark font-bold tracking-wide uppercase text-xs mb-2 block">10 Anos de Experiência</span>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy dark:text-white leading-tight tracking-tight">
                             Montador de Móveis <span class="text-primary-dark">Profissional</span>
                         </h1>
                     </div>
                     <p class="text-slate-600 dark:text-slate-300 text-base md:text-lg leading-relaxed">
-                        Especialista em móveis de loja e internet. Atendemos Blumenau, Indaial, Gaspar, Pomerode e Timbó
-                        com rapidez e qualidade.
+                        Especialista em móveis de loja e internet. Atendemos Blumenau, Indaial, Gaspar, Pomerode e Timbó com rapidez e qualidade.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                        <div
-                            class="flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-3 py-2 rounded-lg border border-green-100 dark:border-green-800/30">
-                            <span
-                                class="material-symbols-outlined text-green-600 dark:text-green-400">verified_user</span>
-                            <span class="text-sm font-bold text-green-800 dark:text-green-300">Garantia de 3
-                                meses</span>
+                        <div class="flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-3 py-2 rounded-lg border border-green-100 dark:border-green-800/30">
+                            <span class="material-symbols-outlined text-green-600 dark:text-green-400">verified_user</span>
+                            <span class="text-sm font-bold text-green-800 dark:text-green-300">Garantia de 3 meses</span>
                         </div>
                     </div>
-                    <a class="mt-2 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white text-base font-bold py-4 px-8 rounded-lg shadow-lg shadow-primary/30 transition-all transform active:scale-95 pulse-light"
-                        href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!">
+                    <a class="mt-2 w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white text-base font-bold py-4 px-8 rounded-lg shadow-lg shadow-primary/30 transition-all transform active:scale-95 pulse-light" href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!">
                         <span class="material-symbols-outlined">chat</span> Solicitar Orçamento no WhatsApp
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Payment Info -->
         <div class="px-4 pb-12">
-            <div
-                class="bg-navy dark:bg-navy-light rounded-xl p-6 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+            <div class="bg-navy dark:bg-navy-light rounded-xl p-6 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
                 <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl"></div>
                 <div class="relative z-10 flex items-start gap-4 max-w-2xl">
@@ -245,10 +114,7 @@
                     <div>
                         <h2 class="text-lg md:text-xl font-bold mb-1">Pagamento 100% Seguro</h2>
                         <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                            Aceitamos <strong class="text-white">PIX</strong> ou <strong
-                                class="text-white">Dinheiro</strong>. Pagamento realizado somente <span
-                                class="text-primary font-bold underline decoration-primary/50 underline-offset-2">ao
-                                final do serviço</span> aprovado.
+                            Aceitamos <strong class="text-white">PIX</strong> ou <strong class="text-white">Dinheiro</strong>. Pagamento realizado somente <span class="text-primary font-bold underline decoration-primary/50 underline-offset-2">ao final do serviço</span> aprovado.
                         </p>
                     </div>
                 </div>
@@ -266,87 +132,63 @@
             </div>
         </div>
 
-        <!-- Services Section -->
-        <section
-            class="px-4 py-12 md:py-16 bg-slate-50 dark:bg-slate-800/50 rounded-t-[3rem] border-t border-slate-200 dark:border-slate-700">
+        <section class="px-4 py-12 md:py-16 bg-slate-50 dark:bg-slate-800/50 rounded-t-[3rem] border-t border-slate-200 dark:border-slate-700">
             <div class="text-center mb-12">
                 <h2 class="text-navy dark:text-white text-3xl md:text-4xl font-bold mb-4">Nossos Serviços</h2>
                 <div class="h-1.5 w-20 bg-primary mx-auto rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Service Items -->
-                <div
-                    class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div
-                        class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined text-3xl">storefront</span>
                     </div>
-                    <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Móveis de Loja/Net
-                    </h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400">Montagem completa de guarda-roupas, camas e
-                        mais.</p>
+                    <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Móveis de Loja/Net</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Montagem completa de guarda-roupas, camas e mais.</p>
                 </div>
-                <div
-                    class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div
-                        class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined text-3xl">desk</span>
                     </div>
                     <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Escritório</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400">Mesas, estantes e cadeiras ergonômicas.</p>
                 </div>
-                <div
-                    class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div
-                        class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined text-3xl">build</span>
                     </div>
                     <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Desmontagem</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400">Cuidado total na desmontagem e remontagem.</p>
                 </div>
-                <div
-                    class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div
-                        class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined text-3xl">tv</span>
                     </div>
-                    <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Painéis e Suportes
-                    </h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400">Instalação segura de TVs e suportes de parede.
-                    </p>
+                    <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Painéis e Suportes</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Instalação segura de TVs e suportes de parede.</p>
                 </div>
-                <div
-                    class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div
-                        class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined text-3xl">kitchen</span>
                     </div>
                     <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Cortes Cooktop</h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400">Adaptação precisa para sua cozinha planejada.
-                    </p>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Adaptação precisa para sua cozinha planejada.</p>
                 </div>
-                <div
-                    class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div
-                        class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined text-3xl">curtains</span>
                     </div>
                     <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Acessórios</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400">Cortinas, quadros e itens de decoração.</p>
                 </div>
-                <div
-                    class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div
-                        class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                <div class="group bg-white dark:bg-navy-light p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="size-14 rounded-xl bg-blue-50 dark:bg-slate-700 flex items-center justify-center mb-5 text-navy dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
                         <span class="material-symbols-outlined text-3xl">fitness_center</span>
                     </div>
                     <h3 class="font-bold text-navy dark:text-slate-100 text-lg leading-tight mb-2">Academia</h3>
                     <p class="text-sm text-slate-500 dark:text-slate-400">Montagem de equipamentos de ginástica.</p>
                 </div>
-
-                <a href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!"
-                    class="group bg-primary p-6 rounded-2xl shadow-lg hover:shadow-primary/40 transition-all flex flex-col justify-center items-center text-center text-white pulse-light">
+                <a href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!" class="group bg-primary p-6 rounded-2xl shadow-lg hover:shadow-primary/40 transition-all flex flex-col justify-center items-center text-center text-white pulse-light">
                     <span class="material-symbols-outlined text-4xl mb-4">add_circle</span>
                     <h3 class="font-bold text-lg leading-tight mb-1">Ver Mais</h3>
                     <p class="text-xs text-white/80">Fale conosco agora</p>
@@ -354,130 +196,93 @@
             </div>
 
             <div class="mt-12 text-center">
-                <a href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!"
-                    class="inline-flex items-center justify-center gap-3 bg-navy dark:bg-slate-700 hover:bg-navy-light text-white font-bold py-4 px-10 rounded-xl shadow-xl transition-all transform hover:scale-105 pulse-light">
+                <a href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!" class="inline-flex items-center justify-center gap-3 bg-navy dark:bg-slate-700 hover:bg-navy-light text-white font-bold py-4 px-10 rounded-xl shadow-xl transition-all transform hover:scale-105 pulse-light">
                     <span class="material-symbols-outlined">handyman</span>
                     Quero contratar agora!
                 </a>
             </div>
         </section>
 
-        <!-- CARROSSEL: Trabalhos Realizados Section -->
+        <!-- CARROSSEL -->
         <section class="pt-16 pb-4 bg-white dark:bg-navy-light/20 relative overflow-hidden">
             <div class="max-w-5xl mx-auto px-4 mb-10 text-center relative z-10">
-                <h2 class="text-navy dark:text-white text-3xl md:text-4xl font-bold mb-4">Nossos Trabalhos Realizados
-                </h2>
+                <h2 class="text-navy dark:text-white text-3xl md:text-4xl font-bold mb-4">Nossos Trabalhos Realizados</h2>
                 <div class="h-1.5 w-20 bg-primary mx-auto rounded-full"></div>
-                <p class="text-slate-500 dark:text-slate-400 mt-4 text-sm max-w-lg mx-auto">Confira a qualidade e o
-                    acabamento perfeito das nossas montagens.</p>
+                <p class="text-slate-500 dark:text-slate-400 mt-4 text-sm max-w-lg mx-auto">Confira a qualidade e o acabamento perfeito das nossas montagens.</p>
             </div>
 
             <div class="max-w-6xl mx-auto swiper-container-padding relative">
                 <div class="swiper mySwiper w-full pb-14">
                     <div class="swiper-wrapper">
-
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho1.webp" alt="Cozinha Completa" width="400" height="500"
-                                        loading="lazy" decoding="async"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                    <img src="trabalho1.webp" alt="Cozinha Completa" width="400" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Cozinha Completa</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho2.webp" alt="Montagem de Cozinha Planejada" width="400"
-                                        height="500" loading="lazy" decoding="async"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                    <img src="trabalho2.webp" alt="Montagem de Cozinha Planejada" width="400" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Cozinha Completa</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho3.webp" alt="Instalação de Painel de TV" width="400" height="500"
-                                        loading="lazy" decoding="async"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                    <img src="trabalho3.webp" alt="Instalação de Painel de TV" width="400" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Painel de TV</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho4.webp" alt="Montagem de Gabinete de Pia" width="400" height="500"
-                                        loading="lazy" decoding="async"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                    <img src="trabalho4.webp" alt="Montagem de Gabinete de Pia" width="400" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Gabinete de Pia</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho5.webp" alt="Montagem de Balcão Buffet" width="400" height="500"
-                                        loading="lazy" decoding="async"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                    <img src="trabalho5.webp" alt="Montagem de Balcão Buffet" width="400" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Balcão Buffet</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="swiper-slide h-auto">
-                            <div
-                                class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
-                                    <img src="trabalho6.webp" alt="Mesa de Escritório" width="400" height="500"
-                                        loading="lazy" decoding="async"
-                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
+                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                    <img src="trabalho6.webp" alt="Mesa de Escritório" width="400" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                                 </div>
-                                <div
-                                    class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
+                                <div class="p-4 border-t border-slate-100 dark:border-slate-700 text-center bg-white dark:bg-navy-light z-10">
                                     <p class="font-bold text-navy dark:text-white text-base">Mesa de Escritório</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
                 <div class="swiper-button-prev hidden md:flex" aria-label="Anterior"></div>
                 <div class="swiper-button-next hidden md:flex" aria-label="Próximo"></div>
             </div>
-
             <div class="text-center mt-2">
-                <a href="https://wa.me/5547988943606?text=Olá,%20gostei%20dos%20trabalhos%20e%20gostaria%20de%20um%20orçamento!"
-                    class="text-primary-dark font-bold hover:underline text-sm inline-flex items-center gap-1">
-                    Gostou? Peça um orçamento sem compromisso <span
-                        class="material-symbols-outlined text-sm">arrow_forward</span>
+                <a href="https://wa.me/5547988943606?text=Olá,%20gostei%20dos%20trabalhos%20e%20gostaria%20de%20um%20orçamento!" class="text-primary-dark font-bold hover:underline text-sm inline-flex items-center gap-1">
+                    Gostou? Peça um orçamento sem compromisso <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
             </div>
         </section>
@@ -489,43 +294,36 @@
                     <h2 class="text-navy dark:text-white text-3xl font-bold mb-8">Por que contratar o Gean Carlos?</h2>
                     <div class="space-y-8">
                         <div class="flex gap-4">
-                            <div
-                                class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                                 <span class="material-symbols-outlined text-2xl">security</span>
                             </div>
                             <div>
                                 <h3 class="font-bold text-navy dark:text-white text-lg">3 Meses de Garantia</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm">Tranquilidade total para você. Se
-                                    algo não ficar perfeito, eu volto e ajusto sem custos.</p>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm">Tranquilidade total para você. Se algo não ficar perfeito, eu volto e ajusto sem custos.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
-                            <div
-                                class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                                 <span class="material-symbols-outlined text-2xl">payments</span>
                             </div>
                             <div>
                                 <h3 class="font-bold text-navy dark:text-white text-lg">Pagamento Facilitado</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm">Pague via Pix ou Dinheiro somente
-                                    após a conclusão e sua aprovação do serviço.</p>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm">Pague via Pix ou Dinheiro somente após a conclusão e sua aprovação do serviço.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
-                            <div
-                                class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                                 <span class="material-symbols-outlined text-2xl">cleaning_services</span>
                             </div>
                             <div>
                                 <h3 class="font-bold text-navy dark:text-white text-lg">Limpeza e Organização</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm">Seu ambiente intacto. Retiro o
-                                    lixo e as embalagens conforme sua necessidade.</p>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm">Seu ambiente intacto. Retiro o lixo e as embalagens conforme sua necessidade.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div
-                    class="w-full lg:w-1/2 bg-slate-50 dark:bg-navy-light p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
+                <div class="w-full lg:w-1/2 bg-slate-50 dark:bg-navy-light p-8 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
                     <div class="space-y-6">
                         <div class="pb-6 border-b border-slate-200 dark:border-slate-700 last:border-0 last:pb-0">
                             <div class="flex text-yellow-400 mb-2">
@@ -535,9 +333,7 @@
                                 <span class="material-symbols-outlined fill-current">star</span>
                                 <span class="material-symbols-outlined fill-current">star</span>
                             </div>
-                            <p class="text-slate-700 dark:text-slate-300 italic text-sm mb-2">"Serviço impecável. O Gean
-                                foi super atencioso, montou meu guarda-roupa gigante com perfeição e deixou tudo limpo.
-                                Recomendo muito!"</p>
+                            <p class="text-slate-700 dark:text-slate-300 italic text-sm mb-2">"Serviço impecável. O Gean foi super atencioso, montou meu guarda-roupa gigante com perfeição e deixou tudo limpo. Recomendo muito!"</p>
                             <span class="text-xs font-bold text-navy dark:text-white">- Mariana S., Blumenau</span>
                         </div>
                         <div class="pb-6 border-b border-slate-200 dark:border-slate-700 last:border-0 last:pb-0">
@@ -548,14 +344,12 @@
                                 <span class="material-symbols-outlined fill-current">star</span>
                                 <span class="material-symbols-outlined fill-current">star</span>
                             </div>
-                            <p class="text-slate-700 dark:text-slate-300 italic text-sm mb-2">"Excelente profissional.
-                                Rápido e cuidadoso com os móveis novos."</p>
+                            <p class="text-slate-700 dark:text-slate-300 italic text-sm mb-2">"Excelente profissional. Rápido e cuidadoso com os móveis novos."</p>
                             <span class="text-xs font-bold text-navy dark:text-white">- Ricardo T., Indaial</span>
                         </div>
                     </div>
                     <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
-                        <p class="text-sm font-medium text-primary-dark text-center italic">Excelência comprovada por
-                            centenas de clientes em toda Blumenau e região.</p>
+                        <p class="text-sm font-medium text-primary-dark text-center italic">Excelência comprovada por centenas de clientes em toda Blumenau e região.</p>
                     </div>
                 </div>
             </div>
@@ -564,47 +358,32 @@
         <!-- SEO Content -->
         <section class="px-4 py-12 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-navy dark:text-white font-bold mb-4 text-xl">Serviços Profissionais de Montagem em Santa
-                    Catarina</h2>
+                <h2 class="text-navy dark:text-white font-bold mb-4 text-xl">Serviços Profissionais de Montagem em Santa Catarina</h2>
                 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                    Gean Carlos é o seu <strong>montador de móveis em Blumenau</strong> de confiança, atendendo também
-                    as cidades de <strong>Indaial, Gaspar, Timbó e Pomerode</strong>. Especializado na montagem de
-                    móveis comprados na internet ou lojas físicas, realizamos a montagem de guarda-roupas, cozinhas,
-                    painéis de TV, mesas de escritório e móveis planejados com agilidade e perícia. Além de montagens,
-                    oferecemos serviços de desmontagem para mudanças, instalação de suportes e ajustes finos, garantindo
-                    sempre a melhor qualidade e satisfação do cliente na região do Vale do Itajaí.
+                    Gean Carlos é o seu <strong>montador de móveis em Blumenau</strong> de confiança, atendendo também as cidades de <strong>Indaial, Gaspar, Timbó e Pomerode</strong>. Especializado na montagem de móveis comprados na internet ou lojas físicas, realizamos a montagem de guarda-roupas, cozinhas, painéis de TV, mesas de escritório e móveis planejados com agilidade e perícia. Além de montagens, oferecemos serviços de desmontagem para mudanças, instalação de suportes e ajustes finos, garantindo sempre a melhor qualidade e satisfação do cliente na região do Vale do Itajaí.
                 </p>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="bg-navy dark:bg-black py-12 px-4 text-center">
             <div class="mb-4 text-sm text-slate-400">
                 <p>© 2026 Gean Carlos Montador - Blumenau, SC. Todos os direitos reservados.</p>
             </div>
-            <a href="https://wa.me/5551999402810?text=Olá%20Willian,%20vi%20a%20página%20que%20você%20fez%20e%20gostaria%20de%20uma%20landing%20page%20de%20alta%20conversão%20para%20meus%20anúncios!"
-                target="_blank" class="text-xs text-slate-500 block hover:text-primary transition-colors">
+            <a href="https://wa.me/5551999402810?text=Olá%20Willian,%20vi%20a%20página%20que%20você%20fez%20e%20gostaria%20de%20uma%20landing%20page%20de%20alta%20conversão%20para%20meus%20anúncios!" target="_blank" class="text-xs text-slate-500 block hover:text-primary transition-colors">
                 Desenvolvido por <span class="font-medium">Willian | Montador Lucrativo</span>
             </a>
         </footer>
     </main>
 
-    <!-- WhatsApp Button -->
-    <a class="fixed bottom-6 right-6 z-50 group"
-        href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!"
-        aria-label="Falar no WhatsApp">
-        <div
-            class="relative flex items-center justify-center size-16 bg-[#25D366] rounded-full shadow-2xl group-hover:scale-110 transition-all duration-300 pulse-strong">
-            <svg class="w-10 h-10 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
-                </path>
+    <a class="fixed bottom-6 right-6 z-50 group" href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!" aria-label="Falar no WhatsApp">
+        <div class="relative flex items-center justify-center size-16 bg-[#25D366] rounded-full shadow-2xl group-hover:scale-110 transition-all duration-300 pulse-strong">
+            <svg class="w-10 h-10 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
             </svg>
         </div>
     </a>
 
-    <!-- SCRIPT DO SWIPER COM DEFER -->
+    <!-- SCRIPT SWIPER -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script>
         window.addEventListener('DOMContentLoaded', function () {
@@ -623,5 +402,4 @@
         });
     </script>
 </body>
-
 </html>
