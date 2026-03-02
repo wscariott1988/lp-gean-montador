@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
         onload="this.media='all'" />
 
-    <!-- ANIMAÇÕES CUSTOMIZADAS -->
+    <!-- ANIMAÇÕES CUSTOMIZADAS E CORREÇÕES -->
     <style>
         body {
             font-family: 'Manrope', sans-serif;
@@ -148,6 +148,19 @@
                 padding-left: 40px;
                 padding-right: 40px;
             }
+        }
+
+        /* TRAVA DE SEGURANÇA PARA AS IMAGENS DA GALERIA NÃO ESPICHAREM */
+        .swiper-slide>div>div:first-child {
+            aspect-ratio: 4 / 5 !important;
+            height: 100% !important;
+            max-height: 350px !important;
+        }
+
+        .swiper-slide img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
         }
     </style>
 </head>
@@ -369,7 +382,7 @@
                         <div class="swiper-slide h-auto">
                             <div
                                 class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
                                     <img src="trabalho1.webp" alt="Cozinha Completa" width="400" height="400"
                                         loading="lazy" decoding="async"
                                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -383,7 +396,7 @@
                         <div class="swiper-slide h-auto">
                             <div
                                 class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
                                     <img src="trabalho2.webp" alt="Montagem de Cozinha Planejada" width="400"
                                         height="400" loading="lazy" decoding="async"
                                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -397,7 +410,7 @@
                         <div class="swiper-slide h-auto">
                             <div
                                 class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
                                     <img src="trabalho3.webp" alt="Instalação de Painel de TV" width="400" height="400"
                                         loading="lazy" decoding="async"
                                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -411,7 +424,7 @@
                         <div class="swiper-slide h-auto">
                             <div
                                 class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
                                     <img src="trabalho4.webp" alt="Montagem de Gabinete de Pia" width="400" height="400"
                                         loading="lazy" decoding="async"
                                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -425,7 +438,7 @@
                         <div class="swiper-slide h-auto">
                             <div
                                 class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
                                     <img src="trabalho5.webp" alt="Montagem de Balcão Buffet" width="400" height="400"
                                         loading="lazy" decoding="async"
                                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -439,7 +452,7 @@
                         <div class="swiper-slide h-auto">
                             <div
                                 class="group h-full overflow-hidden rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 bg-white dark:bg-navy-light flex flex-col cursor-grab active:cursor-grabbing">
-                                <div class="overflow-hidden aspect-square flex-grow w-full">
+                                <div class="overflow-hidden aspect-[4/5] flex-grow w-full">
                                     <img src="trabalho6.webp" alt="Mesa de Escritório" width="400" height="400"
                                         loading="lazy" decoding="async"
                                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -571,6 +584,7 @@
         </footer>
     </main>
 
+    <!-- WhatsApp Button -->
     <a class="fixed bottom-6 right-6 z-50 group"
         href="https://wa.me/5547988943606?text=Olá,%20te%20encontrei%20no%20Google%20e%20gostaria%20de%20um%20orçamento!"
         aria-label="Falar no WhatsApp">
